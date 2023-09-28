@@ -27,7 +27,7 @@ function Features() {
                 }
             }
         >
-            // Why Us
+            {"// Why Us"}
         </motion.p>
         <div className="
         

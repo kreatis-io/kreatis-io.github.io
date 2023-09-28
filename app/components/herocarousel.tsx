@@ -1,5 +1,5 @@
 "use client"
-
+//eslint-disable-next-line
 import ScrollCarousel from "scroll-carousel-react";
 import Image from "next/image";
 
