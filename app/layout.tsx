@@ -7,6 +7,7 @@ const roboto_mono = Roboto_Mono({ weight: ['200'], subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'WebTrope',
   description: 'Web development agency',
+  keywords: ['web developer', 'programmer', 'linux', 'mac os', 'hackintosh', 'woof os', 'woof', 'vithushan', 'sutharsan', 'vithu', 'acutewoof', 'a cute woof'],
 }
 
 export default function RootLayout({
@@ -20,3 +21,4 @@ export default function RootLayout({
     </html>
   )
 }
+

@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
 
-module.exports = nextConfig
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github-profile-summary-cards.vercel.app",
+        port: "",
+        pathname: "**",
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;
