@@ -100,7 +100,7 @@ function Pricing() {
                 initial={initial}
                 animate={inView3 ? animate : initial}
                 transition={transition}
-                className="mt-12 text-black dark:text-gray-200 text-[3vw] lg:text-lg">
+                className="mt-12 text-black dark:text-gray-400 text-[3vw] lg:text-lg">
                 <hr className="w-full border-1 border-slate-300 dark:border-slate-700" />
                 Prices vary depending on the complexity of the site. Contact us for a quote. The prices above are minimums.
             </motion.div>
@@ -140,8 +140,8 @@ function Plan({ title, description, price, features, link, image }: {
                     transition={{ duration: 0.5 }}
                     className="flex flex-col gap-6">
                     <h1 className={"text-4xl font-bold text-black dark:text-white " + major_mono_display.className}>{title}<br />{price}</h1>
-                    <p className="text-black dark:text-gray-200">{description}</p>
-                    <ul className="" >
+                    <p className="text-black dark:text-white">{description}</p>
+                    <ul className="text-black dark:text-white" >
                         {features.map((feature, index) => {
                             return <li key={index}>{feature}</li>
                         })}
