@@ -13,7 +13,7 @@ function Features() {
 
     return <div
         className="bg-graph-paper dark:bg-graph-paper-dark !bg-local
-        min-h-screen p-[7vw] pt-[4vw]"
+        min-h-screen p-[3vw] pt-[4vw]"
     >
         <motion.p className={"mb-[3vw] text-black dark:text-gray-200"}
             ref={ref1}
@@ -29,6 +29,21 @@ function Features() {
         >
             {"// Why Us"}
         </motion.p>
+        <motion.div
+            ref={ref1}
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+                inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={
+                {
+                    duration: 0.5,
+                }
+            }
+            className={major_mono_display.className + ' mb-24 text-[7vw] lg:text-5xl font-bold text-black dark:text-white'}>
+            We strive to make your business succeed.
+        </motion.div>
+
         <div className="
         
         flex flex-col gap-12 items-center
@@ -158,4 +173,4 @@ function Feature({
     )
 }
 
-export default Features;
+export { Features as default };

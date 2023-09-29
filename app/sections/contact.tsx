@@ -13,7 +13,7 @@ function Contact() {
 
     return (
         <section className='bg-hero dark:bg-hero-dark' id="contact">
-            <div className={" px-[7vw] py-[3vw] my-[2vw] flex flex-col gap-8"}>
+            <div className={" px-[3vw] py-[3vw] my-[2vw] flex flex-col gap-8"}>
                 <motion.h1
                     initial={{ opacity: 0, x: -100 }}
                     animate={

@@ -11,15 +11,19 @@ function Header() {
 
     return (
         <header>
-            <nav className='bg-transparent px-4 lg:px-6 pt-8 mb-12'>
+            <nav className='bg-transparent px-[3vw] pt-8 mb-12'>
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0 }}
                     animate={inView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 1 }}
-                    className='flex flex-wrap justify-between items-center mx-6'
+                    className='flex flex-wrap justify-between items-center'
                 >
-                    <span className='self-center text-xl whitespace-nowrap dark:text-white' />
+                    <span className='self-center text-xl whitespace-nowrap dark:text-white'>
+                        <Link href='/' className={major_mono_display.className + ' text-black dark:text-white'}>
+                            KREATIS
+                        </Link>
+                    </span>
                     <div
                         className='hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1'
                         id='mobile-menu-2'
