@@ -16,7 +16,7 @@ function Hero() {
     return (
         <section className='bg-hero dark:bg-hero-dark'>
             <Header />
-            <div className={major_mono_display.className + " py-[3vw] my-[2vw] flex flex-col gap-8"}>
+            <div className={" py-[3vw] my-[2vw] flex flex-col gap-8"}>
                 <motion.h1
                     initial={{ opacity: 0, x: -100 }}
                     animate={
@@ -28,8 +28,8 @@ function Hero() {
                         }
                     }
                     ref={ref}
-                    className='mx-[3vw] text-[10vw] lg:text-6xl max-w-screen-xl font-bold text-black dark:text-white'>
-                    WebTrope is an online web development agency.
+                    className={major_mono_display.className + ' mx-[3vw] text-[10vw] lg:text-6xl max-w-screen-xl font-bold text-black dark:text-white'}>
+                    Kreatis is an online web development agency.
                 </motion.h1>
                 <motion.div
                     initial={{ opacity: 0, x: 100 }}
@@ -39,7 +39,8 @@ function Hero() {
                             duration: 1,
                         }
                     }
-                    className="my-6">
+                    className="mx-[3vw] my-6 text-black dark:text-gray-200">
+                    {"// Previous Work"}
                     <HeroCarousel />
                 </motion.div>
             </div>

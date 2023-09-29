@@ -26,6 +26,7 @@ function HeroCarousel() {
                         }
                         className="
                         cursor-pointer
+                        h-auto w-[100vw] lg:w-[80vw] lg:h-auto
                         "
                     />
                 ))

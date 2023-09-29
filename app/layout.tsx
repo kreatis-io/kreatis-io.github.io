@@ -5,7 +5,7 @@ import { Roboto_Mono } from 'next/font/google'
 const roboto_mono = Roboto_Mono({ weight: ['200'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'WebTrope',
+  title: 'Kreatis',
   description: 'Web development agency',
   keywords: ['web developer', 'programmer', 'linux', 'mac os', 'hackintosh', 'woof os', 'woof', 'vithushan', 'sutharsan', 'vithu', 'acutewoof', 'a cute woof'],
 }
