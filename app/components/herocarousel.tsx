@@ -13,7 +13,7 @@ function HeroCarousel() {
         >{
                 [
                     ["acutewoof.png", "https://acutewoof.is-a.dev"],
-                    ["art.png", "https://lorem-artist.vercel.app/"],
+                    ["obsek.png", "https://acutewoof.is-a.dev/gallery"],
                     ["blog.png", "https://acutewoof.is-a.dev/blog"],
                     ["fit.png", "https://fitnesscourse.github.io"],
                     ["woof-os.png", "https://woof-os.github.io/"],
