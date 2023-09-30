@@ -14,7 +14,7 @@ function Hero() {
     const [ref, inView] = useInView();
 
     return (
-        <section className='bg-hero dark:bg-hero-dark'>
+        <section className='bg-hero dark:bg-hero-dark' id="hero">
             <Header />
             <div className={" py-[3vw] my-[2vw] flex flex-col gap-8"}>
                 <motion.h1

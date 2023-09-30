@@ -118,7 +118,7 @@ function Feature({
     return (
         <motion.div className="max-w-screen-xl min-w-full flex 
                 grid grid-cols-1 lg:grid-cols-2 gap-12
-            ">
+            " id="features">
             <motion.div
                 ref={ref}
                 initial={{ opacity: 0, x: -100 }}

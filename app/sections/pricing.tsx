@@ -18,7 +18,7 @@ function Pricing() {
     const [ref5, inView5] = useInView();
 
     return (
-        <div className="bg-graph-paper dark:bg-graph-paper-dark !bg-local p-[3vw] pt-[4vw]">
+        <div className="bg-graph-paper dark:bg-graph-paper-dark !bg-local p-[3vw] pt-[4vw]" id="pricing">
             <motion.div ref={ref}
                 initial={initial}
                 animate={inView ? animate : initial}

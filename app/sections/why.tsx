@@ -14,7 +14,7 @@ function Why() {
     const [ref2, inView2] = useInView();
 
     return (
-        <div className="bg-graph-paper dark:bg-graph-paper-dark p-[3vw] pt-[4vw]">
+        <div className="bg-graph-paper dark:bg-graph-paper-dark p-[3vw] pt-[4vw]" id="why">
             <motion.div ref={ref}
                 initial={initial}
                 animate={inView ? animate : initial}
