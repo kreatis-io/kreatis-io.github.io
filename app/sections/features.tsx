@@ -12,7 +12,7 @@ function Features() {
     const [ref2, inView2] = useInView();
 
     return <div
-        className="bg-graph-paper dark:bg-graph-paper-dark !bg-local
+        className="
         min-h-screen p-[3vw] pt-[4vw]"
     >
         <motion.p className={"mb-[3vw] text-black dark:text-gray-200"}

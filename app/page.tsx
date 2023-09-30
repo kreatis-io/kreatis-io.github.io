@@ -4,11 +4,13 @@ import Contact from "./sections/contact";
 import Features from "./sections/features";
 import Hero from "./sections/hero";
 import Pricing from "./sections/pricing";
+import Why from "./sections/why";
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden min-h-screen h-full bg-hero dark:bg-hero-dark">
       <Hero />
+      <Why />
       <Features />
       <Pricing />
       <Contact />
