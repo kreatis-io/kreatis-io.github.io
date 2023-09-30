@@ -29,7 +29,7 @@ function Why() {
                 animate={inView2 ? animate : initial}
                 transition={transition}
                 className={major_mono_display.className + ' mb-12 text-[7vw] lg:text-5xl font-bold text-black dark:text-white'}>
-                Unlock your business's potential.
+                {"Unlock your business' potential."}
             </motion.div>
 
             <div className="flex flex-col gap-12 lg:gap-0">
