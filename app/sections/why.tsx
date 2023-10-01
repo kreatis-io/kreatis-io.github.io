@@ -83,12 +83,12 @@ function CircleOnALine() {
     const [ref, inView] = useInView();
 
     return (
-        <div>
+        <div className="hidden lg:block">
             <motion.div ref={ref}
                 initial={{ opacity: 0, y: -100, x: "-50%" }}
                 animate={inView ? { opacity: 1, y: "-50%", x: "-50%" } : { opacity: 0, y: -100, x: "-50%" }}
                 transition={{ duration: 0.5 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-200 z-[100]">
                 <svg
                     stroke="currentColor"
                     fill="currentColor"
