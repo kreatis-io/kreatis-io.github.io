@@ -34,42 +34,81 @@ function Why() {
 
             <div className="flex flex-col gap-12 lg:gap-0">
                 <div
-                    className="lg:flex flex-row-reverse"
+                    className="lg:flex flex-row-reverse relative"
                 ><Reason
                         className="lg:pl-6 "
                         reverse
-                        title="Credibility" description="A well-designed website adds legitimacy to your business, making customers more likely to trust you." />
-                    <span className="hidden lg:block border-l-2 border-gray-500 dark:border-gray-400"></span>
+                        title="Credibility" description="A well-designed website adds legitimacy to your business, making customers more likely to trust you."
+                    />
+                    <CircleOnALine />
+                    <span className="hidden lg:block"></span>
                 </div>
-                <div className="lg:flex flex-row">
+                <div className="lg:flex flex-row relative">
                     <Reason
-                        className="lg:pr-6 lg:border-r-2 border-gray-500 dark:border-gray-400 lg:text-right"
+                        className="lg:pr-6 lg:text-right"
                         title="Marketing" description="Utilise SEO and online advertising to attract more customers at a lower cost than traditional methods." />
+                    <CircleOnALine />
                 </div>
-                <div className="lg:flex flex-row-reverse">
+                <div className="lg:flex flex-row-reverse relative">
                     <Reason
                         className="lg:pl-6 "
                         reverse
                         title="Customer convenience" description="Stand out from competitors who don't have an online presence." />
-                    <span className="hidden lg:block border-l-2 border-gray-500 dark:border-gray-400"></span>
+                    <CircleOnALine />
+                    <span className="hidden"></span>
                 </div>
-                <div className="lg:flex flex-row">
+                <div className="lg:flex flex-row relative">
                     <Reason
-                        className="lg:pr-6 lg:border-r-2 border-gray-500 dark:border-gray-400 lg:text-right"
+                        className="lg:pr-6 lg:text-right"
                         title="Competitive advantage" description="Offer online services, bookings, or e-commerce options for customer ease." />
+                    <CircleOnALine />
                 </div>
-                <div className="lg:flex flex-row-reverse">
+                <div className="lg:flex flex-row-reverse relative">
                     <Reason
                         className="lg:pl-6"
                         reverse
                         title="Branding" description="A website is a canvas to showcase your brand's mission, values, and unique selling points." />
-                    <span className="hidden lg:block border-l-2 border-gray-500 dark:border-gray-400"></span>
+                    <CircleOnALine />
+                    <span className="hidden lg:block"></span>
                 </div>
             </div>
 
         </div>
     )
 }
+
+
+function CircleOnALine() {
+
+    const [ref, inView] = useInView();
+
+    return (
+        <div>
+            <motion.div ref={ref}
+                initial={{ opacity: 0, y: -100, x: "-50%" }}
+                animate={inView ? { opacity: 1, y: "-50%", x: "-50%" } : { opacity: 0, y: -100, x: "-50%" }}
+                transition={{ duration: 0.5 }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">
+                <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="8" cy="8" r="8"></circle>
+                </svg>
+            </motion.div>
+            <hr
+                className="hidden lg:block border-l-2 w-[2px] h-full border-gray-500 dark:border-gray-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></hr>
+        </div>
+    );
+};
+
+
 
 function Reason(
     {
@@ -89,7 +128,7 @@ function Reason(
     const [ref, inView] = useInView();
 
     return (
-        <div className={"lg:w-1/2 lg:py-4 " + className} >
+        <div className={"lg:w-1/2 lg:py-6 " + className} >
             <motion.div
                 ref={ref}
                 initial={initial}
