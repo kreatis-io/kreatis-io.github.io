@@ -67,7 +67,7 @@
     @apply !stroke-slate-800 dark:!stroke-slate-200;
   }
   .CircularProgressbar .CircularProgressbar-trail {
-    @apply !fill-slate-300 dark:!fill-slate-700;
+    @apply !stroke-slate-300 dark:!stroke-slate-700;
   }
   .CircularProgressbar .CircularProgressbar-text {
     @apply !fill-slate-800 dark:!fill-slate-200;
