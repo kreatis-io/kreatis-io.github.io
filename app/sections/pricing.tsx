@@ -43,9 +43,12 @@ function Pricing() {
                     description="Simple landing pages, portfolios, and blogs."
                     price="$250"
                     features={[
+                        "Fully customised website",
+                        "Full branding package",
                         "Up to 5 pages, or a single page site",
                         "Responsive design",
                         "Hosting",
+                        "Domain Name",
                         "Maintenance for a monthly fee",
                     ]}
                     link="https://acutewoof.is-a.dev"
@@ -63,12 +66,15 @@ function Pricing() {
                     description="Complex landing pages, portfolios, and blogs."
                     price="$450"
                     features={[
+                        "Fully customised website",
+                        "Full branding package",
                         "Up to 10 pages",
                         "Responsive design",
                         "Parallax scrolling effects",
                         "3D animations",
                         "Contact form",
                         "Hosting",
+                        "Domain Name",
                         "Maintenance for a monthly fee",
                     ]}
                     link="https://fitnesscourse.github.io"
@@ -85,10 +91,13 @@ function Pricing() {
                     description="Web applications, e-commerce, and more."
                     price="$1000"
                     features={[
+                        "Fully customised website",
+                        "Full branding package",
                         "Responsive design",
                         "React, Next.JS, and Tailwind CSS",
                         "Firebase serverless backend",
                         "Hosting",
+                        "Domain Name",
                         "Maintenance for a monthly fee",
                     ]}
                     link="https://woof-music.web.app"
@@ -139,7 +148,7 @@ function Plan({ title, description, price, features, link, image }: {
                     animate={inView ? left[1] : left[0]}
                     transition={{ duration: 0.5 }}
                     className="flex flex-col gap-6">
-                    <h1 className={"text-4xl font-bold text-black dark:text-white " + major_mono_display.className}>{title}<br />{price}</h1>
+                    <h1 className={"text-4xl font-bold text-black dark:text-white " + major_mono_display.className}>{title}<br />{/*price*/}</h1>
                     <p className="text-black dark:text-white">{description}</p>
                     <ul className="text-black dark:text-white" >
                         {features.map((feature, index) => {

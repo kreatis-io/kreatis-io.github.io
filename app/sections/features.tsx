@@ -3,7 +3,11 @@ import { Major_Mono_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { CircularProgressbar } from "react-circular-progressbar";
 import { useInView } from "react-intersection-observer";
+
+import 'react-circular-progressbar/dist/styles.css';
+import ProgressProvider from "../components/progressProvider";
 
 const major_mono_display = Major_Mono_Display({ weight: ["400"], subsets: ["latin"] });
 
@@ -51,8 +55,9 @@ function Features() {
         ">
             <Feature title="Fast loading times"
                 description={"We specialize in speeding up your website, which keeps your customers happy and engaged. This is what we do best, and it's essential for your business. A faster website awaits you. \n\nWe'll also provide ongoing support and maintenance so that your site stays fast over time. You won't have to worry about anything - just focus on running your business!"}
-                image="/images/screenshots/pagespeed-insight-performance.png"
                 link="https://pagespeed.web.dev/analysis/https-acutewoof-is-a-dev/d49rt5jc9s?form_factor=desktop"
+                progress={93}
+                label="Performance"
             />
             <motion.hr ref={ref2}
                 initial={{ opacity: 0, x: -100 }}
@@ -71,8 +76,9 @@ function Features() {
             <Feature
                 title="Increase discovery"
                 description={"We take your business online, making it discoverable by millions. With the latest tools, your website will be modern and feature-rich. More online visibility means more business for you. \n\n We also make sure that your site is optimized for search engines, so you can get more traffic and customers. "}
-                image="/images/screenshots/pagespeed-insight-seo.png"
                 link="https://pagespeed.web.dev/analysis/https-acutewoof-is-a-dev/d49rt5jc9s?form_factor=desktop"
+                progress={100}
+                label="SEO"
             />
 
             <motion.hr ref={ref2}
@@ -92,8 +98,9 @@ function Features() {
             <Feature
                 title="Make your clients interact"
                 description={"We make your website interactive, engaging your customers like never before. Using cutting-edge tools, we deliver the top-notch experience your clients expect. Keep your customers coming back for more.\n\n We also make sure that accessibility is a priority, so that everyone can use your website."}
-                image="/images/screenshots/pagespeed-insight-accessibility.png"
                 link="https://pagespeed.web.dev/analysis/https-acutewoof-is-a-dev/d49rt5jc9s?form_factor=desktop"
+                progress={100}
+                label="Accessibility"
             />
         </div>
     </div>;
@@ -102,15 +109,17 @@ function Features() {
 function Feature({
     title,
     description,
-    image,
     link,
     linkName,
+    progress,
+    label,
 }: {
     title: string,
     description: string,
-    image: string,
-    link?: string,
+    link: string,
     linkName?: string,
+    progress: number,
+    label: string
 }) {
 
     const [ref, inView] = useInView();
@@ -147,7 +156,8 @@ function Feature({
                     }
                 </p>
             </motion.div>
-            <motion.div
+            <div className="w-full h-full flex flex-col justify-center items-center">
+                {/* <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 animate={
                     inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
@@ -168,7 +178,30 @@ function Feature({
                     }
                     className={link ? "cursor-pointer" : ""}
                 />
-            </motion.div>
+            </motion.div> */}<motion.div
+                    initial={{ opacity: 0}}
+                    animate={
+                        inView ? { opacity: 1} : { opacity: 0}
+                    }
+                    transition={
+                        {
+                            duration: 0.5,
+                        }
+                    }
+                    className="w-[10vw] flex flex-col gap-6 jstify-center items-center">
+                    {
+                        inView &&
+                        <ProgressProvider valueStart={0} valueEnd={progress}>
+                            {(value: number) => <CircularProgressbar value={value} text={
+                                `${value}%`
+                            }
+                            />}
+                        </ProgressProvider>
+                    }
+                    <Link href={link} target="_blank" className="text-[3vw] lg:text-lg text-black dark:text-white underline hover:text-blue-900 active:text-slate-700">
+                        {label}
+                    </Link>
+                </motion.div></div>
         </motion.div>
     )
 }

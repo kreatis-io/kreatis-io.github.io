@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "latest",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "latest",
     "react-intersection-observer": "^9.5.2",
-    "scroll-carousel-react": "^1.0.0"
+    "scroll-carousel-react": "^1.0.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/node": "latest",
