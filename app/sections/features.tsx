@@ -179,16 +179,16 @@ function Feature({
                     className={link ? "cursor-pointer" : ""}
                 />
             </motion.div> */}<motion.div
-                    initial={{ opacity: 0}}
+                    initial={{ opacity: 0 }}
                     animate={
-                        inView ? { opacity: 1} : { opacity: 0}
+                        inView ? { opacity: 1 } : { opacity: 0 }
                     }
                     transition={
                         {
                             duration: 0.5,
                         }
                     }
-                    className="w-[10vw] flex flex-col gap-6 jstify-center items-center">
+                    className="w-[40vw] lg:w-[10vw] flex flex-col gap-6 jstify-center items-center">
                     {
                         inView &&
                         <ProgressProvider valueStart={0} valueEnd={progress}>
