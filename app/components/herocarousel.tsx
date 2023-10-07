@@ -23,7 +23,7 @@ function HeroCarousel() {
                                 window.open(image[1], "_blank");
                             }
                         }
-                        className="cursor-pointer"
+                        className="cursor-pointer h-[56vw] lg:h-[28vw]"
                     />
                 ))
             }
