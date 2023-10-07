@@ -10,7 +10,6 @@ function Contact() {
 
     const [ref, inView] = useInView();
     const [ref2, inView2] = useInView();
-    const [ref3, inView3] = useInView();
 
     return (
         <section className='bg-hero dark:bg-hero-dark' id="contact">
@@ -58,18 +57,6 @@ function Contact() {
                                 className="underline hover:opacity-80"
                                 href="https://discord.gg/sw32M4WhBn">sw32M4WhBn</Link>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        ref={ref3}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={inView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-                        transition={
-                            {
-                                duration: 1,
-                            }
-                        }
-                    >
-                        <Image src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=acutewoof" alt={"acutewoof stats"} width={640} height={300} />
                     </motion.div>
                 </div>
             </div >

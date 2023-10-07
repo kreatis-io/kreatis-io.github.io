@@ -4,10 +4,9 @@ import ScrollCarousel from "scroll-carousel-react";
 import Image from "next/image";
 
 function HeroCarousel() {
-    return <>
+    return <><div className="h-[56vw] lg:h-[28vw]">
         <ScrollCarousel
             smartSpeed
-            margin={20}
             autoplay
             autoplaySpeed={0.25}
         >{
@@ -24,14 +23,11 @@ function HeroCarousel() {
                                 window.open(image[1], "_blank");
                             }
                         }
-                        className="
-                        cursor-pointer
-                        h-auto w-[100vw] lg:w-[80vw] lg:h-auto
-                        "
+                        className="cursor-pointer"
                     />
                 ))
             }
-        </ScrollCarousel>
+        </ScrollCarousel></div>
     </>;
 }
 
