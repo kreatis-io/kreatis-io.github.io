@@ -15,7 +15,7 @@ function Header() {
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0 }}
-                    animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                    animate={inView && { opacity: 1 }}
                     transition={{ duration: 1 }}
                     className='flex flex-wrap justify-between items-center'
                 >

@@ -17,7 +17,7 @@ function Why() {
         <div className="bg-graph-paper dark:bg-graph-paper-dark p-[3vw] pt-[4vw]" id="why">
             <motion.div ref={ref}
                 initial={initial}
-                animate={inView ? animate : initial}
+                animate={inView && animate}
                 transition={transition}
                 className="my-6 text-black dark:text-gray-200">
                 {"// Why You Need A Website"}
@@ -26,7 +26,7 @@ function Why() {
             <motion.div
                 ref={ref2}
                 initial={initial}
-                animate={inView2 ? animate : initial}
+                animate={inView2 && animate}
                 transition={transition}
                 className={major_mono_display.className + ' mb-12 text-[7vw] lg:text-5xl font-bold text-black dark:text-white'}>
                 {"Unlock your business' potential."}
@@ -86,7 +86,7 @@ function CircleOnALine() {
         <div className="hidden lg:block">
             <motion.div ref={ref}
                 initial={{ opacity: 0, y: -100, x: "-50%" }}
-                animate={inView ? { opacity: 1, y: "-50%", x: "-50%" } : { opacity: 0, y: -100, x: "-50%" }}
+                animate={inView && { opacity: 1, y: "-50%", x: "-50%" }}
                 transition={{ duration: 0.5 }}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-200 z-[100]">
                 <svg
@@ -132,7 +132,7 @@ function Reason(
             <motion.div
                 ref={ref}
                 initial={initial}
-                animate={inView ? animate : initial}
+                animate={inView && animate}
                 transition={transition}
                 className={"flex flex-col text-black dark:text-white "}>
                 <div className={"text-[5vw] lg:text-3xl font-bold mb-4 " + major_mono_display.className}>{title.toLowerCase()}</div>

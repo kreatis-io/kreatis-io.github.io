@@ -20,7 +20,7 @@ function Hero() {
                 <motion.h1
                     initial={{ opacity: 0, x: -100 }}
                     animate={
-                        inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                        inView && { opacity: 1, x: 0 }
                     }
                     transition={
                         {

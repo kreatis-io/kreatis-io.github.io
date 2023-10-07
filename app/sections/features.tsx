@@ -23,7 +23,7 @@ function Features() {
             ref={ref1}
             initial={{ opacity: 0, x: -100 }}
             animate={
-                inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                inView && { opacity: 1, x: 0 }
             }
             transition={
                 {
@@ -37,7 +37,7 @@ function Features() {
             ref={ref1}
             initial={{ opacity: 0, x: -100 }}
             animate={
-                inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                inView && { opacity: 1, x: 0 }
             }
             transition={
                 {
@@ -132,7 +132,7 @@ function Feature({
                 ref={ref}
                 initial={{ opacity: 0, x: -100 }}
                 animate={
-                    inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                    inView && { opacity: 1, x: 0 }
                 }
                 transition={
                     {
@@ -181,7 +181,7 @@ function Feature({
             </motion.div> */}<motion.div
                     initial={{ opacity: 0 }}
                     animate={
-                        inView ? { opacity: 1 } : { opacity: 0 }
+                        inView && { opacity: 1 }
                     }
                     transition={
                         {

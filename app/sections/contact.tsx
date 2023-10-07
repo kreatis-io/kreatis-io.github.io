@@ -31,7 +31,7 @@ function Contact() {
                 <div
                     className="my-6 text-black dark:text-gray-200 flex flex-col lg:flex-row gap-4 lg:justify-between">
                     <motion.div initial={{ opacity: 0, x: -100 }}
-                        animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                        animate={inView2 && { opacity: 1, x: 0 }}
                         transition={
                             {
                                 duration: 1,
