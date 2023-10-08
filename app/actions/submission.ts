@@ -8,9 +8,8 @@ const password = process.env.PASSWORD;
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 25,
+  port: 587,
   auth: {
-    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
     user: email,
     pass: password,
   },
@@ -18,6 +17,7 @@ const transporter = nodemailer.createTransport({
 
 export async function submit(prevState: any, formData: FormData) {
   try {
+    console.log("starting");
     const mailOptions: Object = {
       from: email,
       to: "contact@kreatis.io",
@@ -25,15 +25,19 @@ export async function submit(prevState: any, formData: FormData) {
         "email"
       )}`,
       text: formData.get("message"),
+      debug: true,
+      logger: true,
     };
+
+    console.log("info taken");
+
     const info = await transporter.sendMail(mailOptions);
-    console.log("Message sent: %s", info);
-    revalidatePath("/");
+
+    console.log("sent");
+
     return { message: "success" };
   } catch (e) {
     console.error(e);
     return { message: "err" };
   }
 }
-
-function sendMail(formData: FormData) {}
