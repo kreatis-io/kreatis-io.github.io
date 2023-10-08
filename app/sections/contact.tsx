@@ -22,6 +22,9 @@ function Contact() {
     })
 
     useEffect(() => {
+        if (!state) return;
+
+        if (!state.message) return;
 
         if (state.message === "err") {
             alert("There was an error sending your message. Please try again later, or use the email address provided.")
