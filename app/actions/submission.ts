@@ -1,7 +1,5 @@
 "use server";
 
-export const runtime = 'edge' 
-
 import { revalidatePath } from "next/cache";
 import nodemailer from "nodemailer";
 
