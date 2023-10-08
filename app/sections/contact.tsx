@@ -30,7 +30,7 @@ function Contact() {
         else if (state.message) {
             formRef.current?.reset();
         }
-    }, [state.message])
+    }, [state])
 
     return (
         <section className='bg-hero dark:bg-hero-dark' id="contact">

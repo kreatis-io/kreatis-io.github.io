@@ -27,7 +27,9 @@ export async function submit(prevState: any, formData: FormData) {
       text: formData.get("message"),
     };
     const info = await transporter.sendMail(mailOptions);
-    return revalidatePath("/");
+    console.log("Message sent: %s", info);
+    revalidatePath("/");
+    return { message: "success" };
   } catch (e) {
     console.error(e);
     return { message: "err" };
