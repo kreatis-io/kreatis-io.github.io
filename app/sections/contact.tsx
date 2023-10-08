@@ -7,6 +7,7 @@ import SumbitButton from "../components/submitButton";
 import { submit } from "../actions/submission";
 
 import { experimental_useFormState as useFormState } from 'react-dom'
+import { useEffect, useRef } from "react";
 
 const major_mono_display = Major_Mono_Display({ weight: ["400"], subsets: ["latin"] });
 
@@ -14,12 +15,22 @@ function Contact() {
 
     const [ref, inView] = useInView();
     const [ref2, inView2] = useInView();
+    const formRef = useRef<HTMLFormElement>(null);
 
     const [state, formAction] = useFormState(submit, {
         message: null,
-
     })
 
+    useEffect(() => {
+
+        if (state.message === "err") {
+            alert("There was an error sending your message. Please try again later, or use the email address provided.")
+            return;
+        }
+        else if (state.message) {
+            formRef.current?.reset();
+        }
+    }, [state.message])
 
     return (
         <section className='bg-hero dark:bg-hero-dark' id="contact">
@@ -59,7 +70,7 @@ function Contact() {
                     <div className="bg-white dark:bg-gray-900 flex flex-col lg:flex-row gap-8 w-full py-8 lg:py-16 px-4 lg:px-16">
                         <div className="lg:w-[75%]">
                             <div>
-                                <form action={formAction} className="space-y-8">
+                                <form ref={formRef} action={formAction} className="space-y-8">
                                     <div>
                                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
                                         <input type="email" name="email" id="email" className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-slate-500 dark:focus:border-slate-500 " placeholder="contact@kreatis.io" required />

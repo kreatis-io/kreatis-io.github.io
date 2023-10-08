@@ -30,7 +30,7 @@ export async function submit(prevState: any, formData: FormData) {
     return revalidatePath("/");
   } catch (e) {
     console.error(e);
-    return { message: "Failed to create" };
+    return { message: "err" };
   }
 }
 
