@@ -17,7 +17,7 @@ function Contact() {
                 <motion.h1
                     initial={{ opacity: 0, x: -100 }}
                     animate={
-                        inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                        inView && { opacity: 1, x: 0 }
                     }
                     transition={
                         {
@@ -29,35 +29,21 @@ function Contact() {
                     Contact us to get started.
                 </motion.h1>
                 <div
-                    className="my-6 text-black dark:text-gray-200 flex flex-col lg:flex-row gap-4 lg:justify-between">
-                    <motion.div initial={{ opacity: 0, x: -100 }}
-                        animate={inView2 && { opacity: 1, x: 0 }}
-                        transition={
-                            {
-                                duration: 1,
-                            }
-                        }
-                        ref={ref2} className="flex flex-col grow gap-4 max-w-screen-sm">
-                        <div className="flex justify-between">
-                            <span>E-Mail</span>   <span>acutewoof@gmail.com</span>
+                    className="my-6 text-black dark:text-gray-200">
+                    <form action="#" method="POST" className="">
+                        <div className="lg:flex lg:gap-2">
+                            <input type="text" name="name" id="name" placeholder="Name" className="form-input w-full p-2 my-2  dark:bg-slate-900 dark:text-gray-200
+                            active:outline-none focus:outline-none
+                            " />
+                            <input type="email" name="email" id="email" placeholder="Email" className="w-full from-input p-2 my-2 
+                            dark:bg-slate-900 dark:text-gray-200
+                            active:outline-none focus:outline-none
+                            " />
                         </div>
-
-                        <div className="flex justify-between">
-                            Instagram
-                            <Link
-                                className="underline hover:opacity-80"
-                                href="https://instagram.com/acutewoof">@acutewoof</Link>
-                        </div>
-
-                        <div className="flex justify-between">Discord (Direct)
-                            <Link className="underline hover:opacity-80" href="https://discord.com/channels/@me/618114750827462660">@acutewoof</Link>
-                        </div>
-                        <div className="flex justify-between">Discord (Server)
-                            <Link
-                                className="underline hover:opacity-80"
-                                href="https://discord.gg/sw32M4WhBn">sw32M4WhBn</Link>
-                        </div>
-                    </motion.div>
+                        <textarea name="message" id="message" cols={30} rows={10} placeholder="Message / Project Description (mention budget, type of project, and links to any related resources)." className="w-full form-textarea p-2 my-2 dark:bg-slate-900 dark:text-gray-200
+                        active:outline-none focus:outline-none
+                        "></textarea>
+                    </form>
                 </div>
             </div >
         </section >

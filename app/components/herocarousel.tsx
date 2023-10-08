@@ -4,7 +4,7 @@ import ScrollCarousel from "scroll-carousel-react";
 import Image from "next/image";
 
 function HeroCarousel() {
-    return <><div className="h-[56vw] lg:h-[28vw]">
+    return <>
         <ScrollCarousel
             smartSpeed
             autoplay
@@ -27,7 +27,7 @@ function HeroCarousel() {
                     />
                 ))
             }
-        </ScrollCarousel></div>
+        </ScrollCarousel>
     </>;
 }
 

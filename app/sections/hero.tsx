@@ -41,7 +41,9 @@ function Hero() {
                     }
                     className="mx-[3vw] my-6 text-black dark:text-gray-200">
                     {"// Previous Work"}
-                    <HeroCarousel />
+                    <div className="h-[56vw] lg:h-[28vw]">
+                        <HeroCarousel />
+                    </div>
                 </motion.div>
             </div>
         </section>
